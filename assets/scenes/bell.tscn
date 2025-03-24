@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://0d73yj17y8y7"]
+
+[ext_resource type="Texture2D" uid="uid://cjc4q8r87cb0" path="res://assets/sprites/debug/placeholder_bell.png" id="1_s3h4t"]
+[ext_resource type="AudioStream" uid="uid://dify5inauvcr7" path="res://assets/sfx/bike_bell.mp3" id="2_m7bgn"]
+[ext_resource type="Script" uid="uid://haghjks1ktih" path="res://src/interactable/noisemaker.gd" id="2_wlnw1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m7bgn"]
+
+[node name="Bell" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, 20)
+texture = ExtResource("1_s3h4t")
+
+[node name="Area2D" type="Area2D" parent="." groups=["interactable"]]
+script = ExtResource("2_wlnw1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(7, 21)
+scale = Vector2(25, 25)
+shape = SubResource("RectangleShape2D_m7bgn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Area2D"]
+unique_name_in_owner = true
+stream = ExtResource("2_m7bgn")
