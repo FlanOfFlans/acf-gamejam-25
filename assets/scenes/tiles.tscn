@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://h6iavspc41v3"]
+
+[ext_resource type="TileSet" uid="uid://68dc5ixkmxyv" path="res://assets/sprites/tileset.tres" id="1_feiqa"]
+
+[node name="Tiles" type="Node2D"]
+
+[node name="Floor" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_feiqa")
+collision_enabled = false
+
+[node name="Wall" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_feiqa")
+
+[node name="Foreground" type="TileMapLayer" parent="."]
+z_index = 99
+tile_set = ExtResource("1_feiqa")
+collision_enabled = false
+navigation_enabled = false
