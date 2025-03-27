@@ -1,10 +1,15 @@
 [gd_scene load_steps=4 format=4 uid="uid://cpw5lc31xfda2"]
 
+
+[ext_resource type="PackedScene" uid="uid://0d73yj17y8y7" path="res://assets/scenes/bell.tscn" id="1_2rmtc"]
 [ext_resource type="PackedScene" uid="uid://donlvxdth4sg7" path="res://assets/scenes/player.tscn" id="1_u3ro0"]
 [ext_resource type="Texture2D" uid="uid://b2w5dp2aacpbf" path="res://icon.svg" id="2_2rmtc"]
 [ext_resource type="PackedScene" path="res://assets/scenes/tiles.tscn" id="4_ntk4t"]
 
 [node name="origin" type="Node2D"]
+
+[node name="Bell" parent="." instance=ExtResource("1_2rmtc")]
+position = Vector2(745, 161)
 
 [node name="Player" parent="." instance=ExtResource("1_u3ro0")]
 
