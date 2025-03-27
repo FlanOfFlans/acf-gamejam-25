@@ -18,3 +18,5 @@ func update(_delta) -> void:
 	elif Input.is_action_just_pressed("ui_down"):
 		finished.emit(WALK_DOWN);
 	
+	if Input.is_action_just_pressed("interact"):
+		player.interact();
