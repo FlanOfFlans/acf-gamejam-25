@@ -9,5 +9,6 @@ func _ready():
 
 func _on_area_entered(_area: Area2D):
 	print("Something entered the DoorTrigger '" + name + "'")
+	GameDataManager.lastworld = level_scene_file
 	get_tree().change_scene_to_file(level_scene_file)
 	
