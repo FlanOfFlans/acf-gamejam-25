@@ -5,3 +5,7 @@ extends Node
 var playercoords:Vector2 = Vector2(0, 0) #stores player coordinates
 
 var lastworld:String = "res://assets/scenes/demo_world.tscn" #keeps track of which world the player is in
+
+var tarotcounter:int = 0
+
+var paused: bool = false
