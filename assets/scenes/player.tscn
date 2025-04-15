@@ -220,5 +220,5 @@ position = Vector2(0, 362)
 scale = Vector2(15, 15)
 shape = SubResource("RectangleShape2D_o5c66")
 
-[node name="MenuSlot" type="Node2D" parent="."]
+[node name="MenuSlot" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
