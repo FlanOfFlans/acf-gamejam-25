@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1ow2yswt8sik"]
+
+[ext_resource type="Script" uid="uid://brfb4ce08hy4a" path="res://src/warps/scene_changer.gd" id="1_tnbff"]
+
+[sub_resource type="GDScript" id="GDScript_sas6r"]
+script/source = "extends Area2D;
+
+@onready var warp: Warp = %Warp;
+
+@export var warp_to: String:
+	set(value):
+		warp_to = value;
+		if warp:
+			warp.level_scene_file = warp_to;
+
+@export var entry_point: String:
+	set(value):
+		entry_point = value;
+		if warp:
+			warp.entry_point = entry_point;
+
+func _ready() -> void:
+	warp.level_scene_file = warp_to;
+	warp.entry_point = entry_point;
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vl4k4"]
+size = Vector2(32, 32)
+
+[node name="WarpOnCollision" type="Area2D"]
+collision_mask = 32769
+monitorable = false
+script = SubResource("GDScript_sas6r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vl4k4")
+
+[node name="Warp" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_tnbff")
+
+[connection signal="body_entered" from="." to="Warp" method="warp" unbinds=1]
