@@ -9,6 +9,7 @@ tile_set = ExtResource("1_feiqa")
 collision_enabled = false
 
 [node name="Wall" type="TileMapLayer" parent="."]
+z_index = 1
 tile_set = ExtResource("1_feiqa")
 
 [node name="Foreground" type="TileMapLayer" parent="."]

@@ -4,6 +4,9 @@ func enter(_previous_state_path: String, _data: Dictionary = {}) -> void:
 	player.velocity.y = 0;
 	player.velocity.x = player.speed;
 	player.animation_player.play("walk_right");
+	
+func exit() -> void:
+	player.animation_player.play("idle_right");
 
 func update(_delta) -> void:	
 	if not Input.is_action_pressed("ui_right"):

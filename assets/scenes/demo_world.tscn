@@ -11,6 +11,7 @@
 position = Vector2(745, 161)
 
 [node name="Player" parent="." instance=ExtResource("1_u3ro0")]
+speed = 600.0
 
 [node name="standard reference godot" type="Sprite2D" parent="."]
 position = Vector2(291, 17)
