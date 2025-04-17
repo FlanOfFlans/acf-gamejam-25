@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b2w5dp2aacpbf" path="res://icon.svg" id="3_bw80d"]
 [ext_resource type="PackedScene" uid="uid://h6iavspc41v3" path="res://assets/scenes/tiles.tscn" id="4_xg60r"]
 [ext_resource type="Texture2D" uid="uid://bldb4t0aay1bs" path="res://assets/sprites/decal_door.png" id="5_k6tyx"]
-[ext_resource type="PackedScene" uid="uid://c1ow2yswt8sik" path="res://src/warps/warp_on_collision.tscn" id="6_pfhd7"]
+[ext_resource type="PackedScene" uid="uid://c1ow2yswt8sik" path="res://assets/scenes/warp_on_collision.tscn" id="6_pfhd7"]
 
 [node name="origin" type="Node2D"]
 
