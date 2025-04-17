@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://du5u3xgv7jt0o"]
+
+[ext_resource type="Script" uid="uid://svarna4ua1mr" path="res://src/tarot_card.gd" id="1_24k4u"]
+[ext_resource type="Texture2D" uid="uid://di3jtcymxsgar" path="res://assets/sprites/debug/placeholder_card.png" id="2_ska54"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vm44"]
+
+[node name="TarotCard" type="Area2D"]
+script = ExtResource("1_24k4u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ska54")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(11.5, 11.5)
+shape = SubResource("RectangleShape2D_4vm44")
+
+[connection signal="body_entered" from="." to="." method="collect" unbinds=1]
