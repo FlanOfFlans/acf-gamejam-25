@@ -3,9 +3,16 @@ class_name Player extends CharacterBody2D
 @onready var menuslot = %MenuSlot
 @onready var animation_player = %AnimationPlayer;
 @onready var interaction_area = %InteractionArea;
-@export var speed = 5.0; # Completely random number, TODO tune this
+@export var speed = 600.0;
 
 var pausemenu = "res://assets/scenes/pause_menu.tscn"
+
+func _ready() -> void:
+	if (GameDataManager.entry_point != ""):
+		var entry_point = get_parent().get_node(
+			"Entry Points/" + GameDataManager.entry_point);
+		if (entry_point != null):
+			position = entry_point.position;
 
 func _physics_process(_delta: float) -> void:
 	move_and_slide();

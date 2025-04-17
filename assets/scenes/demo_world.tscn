@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=4 uid="uid://cpw5lc31xfda2"]
+[gd_scene load_steps=7 format=4 uid="uid://cpw5lc31xfda2"]
 
 [ext_resource type="PackedScene" uid="uid://0d73yj17y8y7" path="res://assets/scenes/bell.tscn" id="1_2rmtc"]
 [ext_resource type="PackedScene" uid="uid://donlvxdth4sg7" path="res://assets/scenes/player.tscn" id="1_u3ro0"]
 [ext_resource type="Texture2D" uid="uid://b2w5dp2aacpbf" path="res://icon.svg" id="2_2rmtc"]
 [ext_resource type="PackedScene" uid="uid://h6iavspc41v3" path="res://assets/scenes/tiles.tscn" id="4_ntk4t"]
+[ext_resource type="Texture2D" uid="uid://bldb4t0aay1bs" path="res://assets/sprites/decal_door.png" id="5_8lqhp"]
+[ext_resource type="PackedScene" uid="uid://c1ow2yswt8sik" path="res://src/warps/warp_on_collision.tscn" id="6_flb74"]
 
 [node name="origin" type="Node2D"]
 
@@ -11,7 +13,6 @@
 position = Vector2(745, 161)
 
 [node name="Player" parent="." instance=ExtResource("1_u3ro0")]
-speed = 600.0
 
 [node name="standard reference godot" type="Sprite2D" parent="."]
 position = Vector2(291, 17)
@@ -19,10 +20,23 @@ texture = ExtResource("2_2rmtc")
 
 [node name="Tiles" parent="." instance=ExtResource("4_ntk4t")]
 
-[node name="Wall" parent="Tiles" index="1"]
-tile_map_data = PackedByteArray("AAADAAAAAAADAAIAABAEAAAAAAADAAMAAAAFAAAAAAADAAIAAAADAP//AAAAAAQAABAEAP//AAAEAAMAAAAFAP//AAAAAAQAAAA=")
+[node name="Floor" parent="Tiles" index="0"]
+tile_map_data = PackedByteArray("AAADAP7/AAACAAIAAAACAP//AAACAAIAAAADAP//AAACAAIAAAAEAP//AAACAAIAAAAFAP//AAACAAIAAAAGAP//AAACAAIAAAAFAP7/AAACAAIAAAADAAAAAAACAAIAAAAEAAAAAAACAAIAAAAFAAAAAAACAAIAAAAEAAEAAAACAAIAAAA=")
 
-[node name="Foreground" parent="Tiles" index="2"]
-tile_map_data = PackedByteArray("AAAEAP7/AAAAAAMAAAAFAP7/AAABAAMAAAADAP7/AAABAAMAABA=")
+[node name="Demo2 Warp" type="Node2D" parent="."]
+position = Vector2(-1658, -516)
+
+[node name="Sprite2D" type="Sprite2D" parent="Demo2 Warp"]
+texture = ExtResource("5_8lqhp")
+
+[node name="WarpOnCollision" parent="Demo2 Warp" instance=ExtResource("6_flb74")]
+scale = Vector2(25, 25)
+warp_to = "res://assets/scenes/demo_world_2.tscn"
+entry_point = "Demo1 Entry"
+
+[node name="Entry Points" type="Node2D" parent="."]
+
+[node name="Demo2 Entry" type="Node2D" parent="Entry Points"]
+position = Vector2(2287, -94)
 
 [editable path="Tiles"]
