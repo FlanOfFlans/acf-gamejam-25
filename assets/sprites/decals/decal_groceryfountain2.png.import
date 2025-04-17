@@ -2,26 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvlrkfe1285og"
-path="res://.godot/imported/sprite_sheet1.png-a53997acd331842ebc49a03c608cbfbc.ctex"
+uid="uid://yc6v8ewwq0av"
+path="res://.godot/imported/decal_groceryfountain2.png-94ce4fe63b82e06126c0473a8b9db4dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/sprite_sheet1.png"
-dest_files=["res://.godot/imported/sprite_sheet1.png-a53997acd331842ebc49a03c608cbfbc.ctex"]
+source_file="res://assets/sprites/decals/decal_groceryfountain2.png"
+dest_files=["res://.godot/imported/decal_groceryfountain2.png-94ce4fe63b82e06126c0473a8b9db4dc.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
