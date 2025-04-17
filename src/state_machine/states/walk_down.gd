@@ -5,6 +5,9 @@ func enter(_previous_state_path: String, _data: Dictionary = {}) -> void:
 	player.velocity.y = player.speed;
 	player.animation_player.play("walk_down");
 
+func exit() -> void:
+	player.animation_player.play("idle_down");
+
 func update(_delta) -> void:
 	if not Input.is_action_pressed("ui_down"):
 		finished.emit(IDLE);
