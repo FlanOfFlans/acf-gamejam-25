@@ -1,22 +1,16 @@
-[gd_scene load_steps=9 format=4 uid="uid://crao13jio4y7h"]
+[gd_scene load_steps=7 format=4 uid="uid://crao13jio4y7h"]
 
+[ext_resource type="PackedScene" uid="uid://donlvxdth4sg7" path="res://assets/scenes/player.tscn" id="1_bj65c"]
 [ext_resource type="PackedScene" uid="uid://h6iavspc41v3" path="res://assets/scenes/tiles.tscn" id="1_jc3jv"]
 [ext_resource type="Texture2D" uid="uid://gcu7wwurwafx" path="res://assets/sprites/decals/decal_eyes1.png" id="1_mujfs"]
 [ext_resource type="TileSet" uid="uid://68dc5ixkmxyv" path="res://assets/sprites/tileset.tres" id="2_g3rmf"]
 [ext_resource type="PackedScene" uid="uid://c1ow2yswt8sik" path="res://assets/scenes/warp_on_collision.tscn" id="4_bj65c"]
 [ext_resource type="Texture2D" uid="uid://da6kvdasupism" path="res://assets/sprites/decals/decal_eggasteroid.png" id="5_yv7yi"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_twd71"]
-size = Vector2(1251, 1290)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_16tqp"]
-size = Vector2(7729.17, 8254.51)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tq6fv"]
-radius = 226.857
-height = 543.429
-
 [node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_bj65c")]
+position = Vector2(7927, 2193)
 
 [node name="Entry Points" type="Node2D" parent="."]
 
@@ -43,50 +37,33 @@ tile_map_data = PackedByteArray("AAD7//z/AAACAAAAAAAFAAAAAAADAAAAAAD9/wQAAAACAAA
 
 [node name="Observatory Warp" type="Node2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Observatory Warp"]
-position = Vector2(-124, 93)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Observatory Warp/StaticBody2D"]
-position = Vector2(9730.5, 2079)
-shape = SubResource("RectangleShape2D_twd71")
-
-[node name="WarpOnCollision" parent="Observatory Warp/StaticBody2D" instance=ExtResource("4_bj65c")]
-position = Vector2(9737, 2129)
+[node name="WarpOnCollision" parent="Observatory Warp" instance=ExtResource("4_bj65c")]
+position = Vector2(9760, 2155)
 scale = Vector2(26.76, 26.28)
 warp_to = "res://assets/scenes/worlds/observatoryworld.tscn"
 entry_point = "Meteor Herd Entry"
 
 [node name="Bathhouse Warp" type="Node2D" parent="."]
 position = Vector2(-21097.5, -6855)
-scale = Vector2(0.124512, 0.177734)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Bathhouse Warp"]
-
-[node name="WarpOnCollision" parent="Bathhouse Warp/StaticBody2D" instance=ExtResource("4_bj65c")]
-position = Vector2(-13707, -3373.32)
+[node name="WarpOnCollision" parent="Bathhouse Warp" instance=ExtResource("4_bj65c")]
+position = Vector2(-1647.5, -516)
+scale = Vector2(25, 25)
 warp_to = "res://assets/scenes/worlds/bathhouseworld.tscn"
 entry_point = "Meteor Herd Entry"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bathhouse Warp/StaticBody2D"]
-position = Vector2(-13707, -3373.32)
-shape = SubResource("RectangleShape2D_16tqp")
-
 [node name="Black Hole Warp" type="Node2D" parent="."]
+
+[node name="WarpOnCollision" parent="Black Hole Warp" instance=ExtResource("4_bj65c")]
+position = Vector2(-12640.5, 1749)
+scale = Vector2(50, 59.369)
+warp_to = "res://assets/scenes/worlds/blackholeworld.tscn"
+entry_point = "Meteor Herd Entry"
 
 [node name="Sprite2D" type="Sprite2D" parent="Black Hole Warp"]
 z_index = 1
 position = Vector2(-12640.5, 1749)
 scale = Vector2(2.95, 3.5)
 texture = ExtResource("5_yv7yi")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Black Hole Warp/Sprite2D"]
-
-[node name="WarpOnCollision" parent="Black Hole Warp/Sprite2D/StaticBody2D" instance=ExtResource("4_bj65c")]
-scale = Vector2(24.9458, 24.9657)
-warp_to = "res://assets/scenes/worlds/blackholeworld.tscn"
-entry_point = "Meteor Herd Entry"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Black Hole Warp/Sprite2D/StaticBody2D"]
-shape = SubResource("CapsuleShape2D_tq6fv")
 
 [editable path="Tiles"]

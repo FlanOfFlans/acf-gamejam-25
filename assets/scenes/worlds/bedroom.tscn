@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://dktp2na2nj4f8"]
+[gd_scene load_steps=13 format=3 uid="uid://dktp2na2nj4f8"]
 
 [ext_resource type="Texture2D" uid="uid://v45pnm35bj4y" path="res://assets/sprites/bedroom.png" id="1_axckk"]
 [ext_resource type="Texture2D" uid="uid://dbioupnqudw8l" path="res://assets/sprites/decals/decal_door.png" id="2_c0c87"]
 [ext_resource type="Texture2D" uid="uid://fvo8gyt7gjpt" path="res://assets/sprites/decals/decal_bed.png" id="3_fhcwe"]
 [ext_resource type="PackedScene" uid="uid://c1ow2yswt8sik" path="res://assets/scenes/warp_on_collision.tscn" id="4_fhcwe"]
 [ext_resource type="Texture2D" uid="uid://gcu7wwurwafx" path="res://assets/sprites/decals/decal_eyes1.png" id="5_f1gne"]
+[ext_resource type="PackedScene" uid="uid://donlvxdth4sg7" path="res://assets/scenes/player.tscn" id="6_u6r3v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sxc3j"]
 size = Vector2(560.05, 3981.3)
@@ -24,7 +25,7 @@ size = Vector2(1278.13, 2293.89)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcrtu"]
 size = Vector2(937.028, 849.07)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="bedroom" type="Sprite2D" parent="."]
 position = Vector2(-527, -527)
@@ -91,3 +92,7 @@ visible = false
 position = Vector2(-89.1969, 1736.87)
 scale = Vector2(0.11044, 0.0983415)
 texture = ExtResource("5_f1gne")
+
+[node name="Player" parent="." instance=ExtResource("6_u6r3v")]
+position = Vector2(-360, -418)
+scale = Vector2(1.2108, 1.2108)

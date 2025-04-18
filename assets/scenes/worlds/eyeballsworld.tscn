@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://bxynptnfrjjx6"]
+[gd_scene load_steps=9 format=4 uid="uid://bxynptnfrjjx6"]
 
 [ext_resource type="PackedScene" uid="uid://h6iavspc41v3" path="res://assets/scenes/tiles.tscn" id="1_g2w0f"]
 [ext_resource type="TileSet" uid="uid://68dc5ixkmxyv" path="res://assets/sprites/tileset.tres" id="2_crcjo"]
@@ -9,16 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bg2wuemy6v77o" path="res://assets/sprites/decals/decal_eyes3.png" id="7_avh43"]
 [ext_resource type="Texture2D" uid="uid://c0sc65ex7kl7p" path="res://assets/sprites/decals/decal_eyes4.png" id="8_8win8"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v2ym"]
-size = Vector2(729.25, 867.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7hml"]
-size = Vector2(595, 756)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ca2y"]
-size = Vector2(4067.75, 4403.93)
-
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="Tiles" parent="." instance=ExtResource("1_g2w0f")]
 
@@ -53,45 +44,27 @@ texture = ExtResource("5_jjcdk")
 
 [node name="Grocery Warp" type="Node2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grocery Warp"]
-position = Vector2(0, 155)
-
-[node name="WarpOnCollision" parent="Grocery Warp/StaticBody2D" instance=ExtResource("5_hf3tb")]
-position = Vector2(-14730.6, -8478.75)
+[node name="WarpOnCollision" parent="Grocery Warp" instance=ExtResource("5_hf3tb")]
+position = Vector2(-14730.6, -8323.75)
 warp_to = "res://assets/scenes/worlds/groceryforest.tscn"
 entry_point = "Eyeballs Entry"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grocery Warp/StaticBody2D"]
-position = Vector2(-14730.6, -8478.75)
-shape = SubResource("RectangleShape2D_3v2ym")
-
 [node name="School Warp" type="Node2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="School Warp"]
-
-[node name="WarpOnCollision" parent="School Warp/StaticBody2D" instance=ExtResource("5_hf3tb")]
+[node name="WarpOnCollision" parent="School Warp" instance=ExtResource("5_hf3tb")]
 position = Vector2(-2592.5, 239)
 warp_to = "res://assets/scenes/worlds/schoolworld.tscn"
 entry_point = "Eyeballs Entry"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="School Warp/StaticBody2D"]
-position = Vector2(-2592.5, 239)
-shape = SubResource("RectangleShape2D_e7hml")
 
 [node name="Bathhouse Warp" type="Node2D" parent="."]
 position = Vector2(-726, 247)
 scale = Vector2(0.193604, 0.172119)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Bathhouse Warp"]
-
-[node name="WarpOnCollision" parent="Bathhouse Warp/StaticBody2D" instance=ExtResource("5_hf3tb")]
+[node name="WarpOnCollision" parent="Bathhouse Warp" instance=ExtResource("5_hf3tb")]
 position = Vector2(91181.2, -8767.18)
+scale = Vector2(25, 25)
 warp_to = "res://assets/scenes/bathhouseworld.tscn"
 entry_point = "Eyeballs Entry"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bathhouse Warp/StaticBody2D"]
-position = Vector2(91759.7, -8836.9)
-shape = SubResource("RectangleShape2D_8ca2y")
 
 [node name="Decals" type="Node2D" parent="."]
 position = Vector2(14563, -1249.5)

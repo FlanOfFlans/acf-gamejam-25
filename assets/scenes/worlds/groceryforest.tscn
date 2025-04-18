@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://b37a3yx57smyu"]
+[gd_scene load_steps=14 format=4 uid="uid://b37a3yx57smyu"]
 
 [ext_resource type="PackedScene" uid="uid://h6iavspc41v3" path="res://assets/scenes/tiles.tscn" id="1_kpa1d"]
 [ext_resource type="TileSet" uid="uid://68dc5ixkmxyv" path="res://assets/sprites/tileset.tres" id="2_th8vi"]
@@ -10,15 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dwharbmbirx1c" path="res://assets/sprites/decals/decal_grocerycheckout.png" id="8_rgg44"]
 [ext_resource type="Texture2D" uid="uid://djcaqkj2u3nxl" path="res://assets/sprites/decals/decal_grocerygreenery2.png" id="9_x5cbd"]
 [ext_resource type="Texture2D" uid="uid://c8cvxfgt8wm4v" path="res://assets/sprites/decals/decal_grocerygreenery3.png" id="10_16y71"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwxat"]
-size = Vector2(1549.02, 2022.83)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_th8vi"]
-size = Vector2(2778.15, 3527.66)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_55l7m"]
-size = Vector2(1768.1, 2758.16)
+[ext_resource type="PackedScene" uid="uid://donlvxdth4sg7" path="res://assets/scenes/player.tscn" id="11_rgg44"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ye27g"]
 animations = [{
@@ -78,51 +70,31 @@ texture = ExtResource("3_rreac")
 position = Vector2(-6508, 7510)
 scale = Vector2(0.417969, 0.437012)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Observatory Warp"]
-
-[node name="WarpOnCollision" parent="Observatory Warp/StaticBody2D" instance=ExtResource("4_j10po")]
-position = Vector2(-2409.27, 102.973)
-scale = Vector2(25, 25)
+[node name="WarpOnCollision" parent="Observatory Warp" instance=ExtResource("4_j10po")]
+position = Vector2(-2976.3, 221.961)
+scale = Vector2(40, 40)
 warp_to = "res://assets/scenes/worlds/observatoryworld.tscn"
 entry_point = " Grocery Forest Entry"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Observatory Warp/StaticBody2D"]
-position = Vector2(-2727.48, -50.3398)
-shape = SubResource("RectangleShape2D_vwxat")
 
 [node name="Eyeballs Warp" type="Node2D" parent="."]
 position = Vector2(-6508, 7510)
 scale = Vector2(0.417969, 0.437012)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Eyeballs Warp"]
-
-[node name="WarpOnCollision" parent="Eyeballs Warp/StaticBody2D" instance=ExtResource("4_j10po")]
-position = Vector2(59085.8, -16141.4)
-scale = Vector2(25, 25)
+[node name="WarpOnCollision" parent="Eyeballs Warp" instance=ExtResource("4_j10po")]
+position = Vector2(59229.3, -16846.2)
+scale = Vector2(40, 40)
 warp_to = "res://assets/scenes/worlds/eyeballsworld.tscn"
 entry_point = " Grocery Forest Entry"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Eyeballs Warp/StaticBody2D"]
-position = Vector2(59370.5, -17370.2)
-shape = SubResource("RectangleShape2D_th8vi")
 
 [node name="Styrofoam Warp" type="Node2D" parent="."]
 position = Vector2(-6437, 2556)
 scale = Vector2(0.32666, 0.31958)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Styrofoam Warp"]
-position = Vector2(-290.822, 175.23)
-
-[node name="WarpOnCollision" parent="Styrofoam Warp/StaticBody2D" instance=ExtResource("4_j10po")]
-position = Vector2(-4797.04, 9.38763)
+[node name="WarpOnCollision" parent="Styrofoam Warp" instance=ExtResource("4_j10po")]
+position = Vector2(-5087.86, 184.617)
 scale = Vector2(54.6659, 81.4074)
 warp_to = "res://assets/scenes/worlds/styrofoamworld.tscn"
 entry_point = "Grocery Forest Entry"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Styrofoam Warp/StaticBody2D"]
-position = Vector2(-4796.38, 36.6904)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_55l7m")
 
 [node name="Decals" type="Node2D" parent="."]
 
@@ -137,7 +109,6 @@ frame_progress = 0.28856
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Decals/Fountain/StaticBody2D"]
 position = Vector2(-6.49707, 77.1184)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_j10po")
 
 [node name="bush" type="Sprite2D" parent="Decals"]
@@ -179,5 +150,8 @@ texture = ExtResource("8_rgg44")
 position = Vector2(13277, -3230)
 scale = Vector2(4.4, 5.514)
 texture = ExtResource("10_16y71")
+
+[node name="Player" parent="." instance=ExtResource("11_rgg44")]
+position = Vector2(4453, 2871)
 
 [editable path="Tiles"]

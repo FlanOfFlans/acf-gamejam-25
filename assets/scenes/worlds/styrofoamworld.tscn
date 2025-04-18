@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://c6xk8j6tf0wqq"]
+[gd_scene load_steps=14 format=4 uid="uid://c6xk8j6tf0wqq"]
 
 [ext_resource type="PackedScene" uid="uid://h6iavspc41v3" path="res://assets/scenes/tiles.tscn" id="1_p2xkw"]
 [ext_resource type="TileSet" uid="uid://68dc5ixkmxyv" path="res://assets/sprites/tileset.tres" id="2_s3rh5"]
@@ -9,15 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://xb700wh3ovkr" path="res://assets/sprites/decals/decal_styrofoambuilding2.png" id="7_rueo1"]
 [ext_resource type="Texture2D" uid="uid://b76eqgcqb7xya" path="res://assets/sprites/decals/decal_styrofoambuilding3.png" id="8_a27un"]
 [ext_resource type="Texture2D" uid="uid://vtguysvy28a" path="res://assets/sprites/decals/decal_styrofoambuilding4.png" id="9_r5m00"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_te6op"]
-size = Vector2(892, 944)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0puf"]
-size = Vector2(3298.55, 3364.82)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6nuba"]
-size = Vector2(1442, 1258)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38fgr"]
 size = Vector2(780.173, 1014.69)
@@ -67,44 +58,26 @@ texture = ExtResource("4_5tlns")
 
 [node name="Grocery Forest Warp" type="Node2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grocery Forest Warp"]
-
-[node name="WarpOnCollision" parent="Grocery Forest Warp/StaticBody2D" instance=ExtResource("5_ojqm6")]
+[node name="WarpOnCollision" parent="Grocery Forest Warp" instance=ExtResource("5_ojqm6")]
 position = Vector2(26769, 12144)
 warp_to = "res://assets/scenes/worlds/groceryforest.tscn"
 entry_point = "Styrofoam Entry"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grocery Forest Warp/StaticBody2D"]
-position = Vector2(26769, 12144)
-shape = SubResource("RectangleShape2D_te6op")
-
 [node name="School Warp" type="Node2D" parent="."]
 position = Vector2(12275, -13157)
-scale = Vector2(0.331055, 0.285645)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="School Warp"]
-
-[node name="WarpOnCollision" parent="School Warp/StaticBody2D" instance=ExtResource("5_ojqm6")]
-position = Vector2(-138.95, -6098.49)
+[node name="WarpOnCollision" parent="School Warp" instance=ExtResource("5_ojqm6")]
+position = Vector2(-46, -1771)
+scale = Vector2(25, 25)
 warp_to = "res://assets/scenes/worlds/schoolworld.tscn"
 entry_point = "Styrofoam Entry"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="School Warp/StaticBody2D"]
-position = Vector2(-33.2272, -6326.04)
-shape = SubResource("RectangleShape2D_h0puf")
-
 [node name="Bathhouse Warp" type="Node2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Bathhouse Warp"]
-
-[node name="WarpOnCollision" parent="Bathhouse Warp/StaticBody2D" instance=ExtResource("5_ojqm6")]
-position = Vector2(-18739, 11711)
+[node name="WarpOnCollision" parent="Bathhouse Warp" instance=ExtResource("5_ojqm6")]
+position = Vector2(-18717, 11652)
 warp_to = "res://assets/scenes/worlds/bathhouseworld.tscn"
 entry_point = "Styrofoam Entry"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bathhouse Warp/StaticBody2D"]
-position = Vector2(-18739, 11711)
-shape = SubResource("RectangleShape2D_6nuba")
 
 [node name="Buildings" type="Node2D" parent="."]
 position = Vector2(12229, -14899)
@@ -112,7 +85,6 @@ scale = Vector2(8.27637, 7.14111)
 
 [node name="Sprite2D5" type="Sprite2D" parent="Buildings"]
 position = Vector2(1097.22, 221.114)
-scale = Vector2(1, 1)
 texture = ExtResource("6_6nuba")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Buildings/Sprite2D5"]
@@ -120,7 +92,6 @@ position = Vector2(-14.0158, 26.0464)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/Sprite2D5/StaticBody2D"]
 position = Vector2(-19.6343, -30.8079)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_38fgr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Buildings"]
@@ -132,7 +103,6 @@ position = Vector2(-14.0158, 26.0464)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/Sprite2D/StaticBody2D"]
 position = Vector2(0.241455, 15.4038)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_38fgr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Buildings"]
@@ -143,7 +113,6 @@ texture = ExtResource("7_rueo1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/Sprite2D2/StaticBody2D"]
 position = Vector2(6.04114, -23.3859)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_cj261")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Buildings"]
@@ -155,7 +124,6 @@ texture = ExtResource("8_a27un")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/Sprite2D3/StaticBody2D"]
 position = Vector2(-12.5171, 4.86255)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_04cam")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Buildings"]
@@ -166,7 +134,6 @@ texture = ExtResource("9_r5m00")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/Sprite2D4/StaticBody2D"]
 position = Vector2(1.08743, -26.3264)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_7fckd")
 
 [node name="Sprite2D6" type="Sprite2D" parent="Buildings"]
@@ -178,7 +145,6 @@ position = Vector2(-14.0158, 26.0464)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/Sprite2D6/StaticBody2D"]
 position = Vector2(0.241455, 15.4038)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_38fgr")
 
 [node name="Sprite2D7" type="Sprite2D" parent="Buildings"]
@@ -189,7 +155,6 @@ texture = ExtResource("7_rueo1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/Sprite2D7/StaticBody2D"]
 position = Vector2(6.04126, -6.16156)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_cj261")
 
 [editable path="Tiles"]
