@@ -1,8 +1,22 @@
-[gd_scene load_steps=4 format=4 uid="uid://bxynptnfrjjx6"]
+[gd_scene load_steps=12 format=4 uid="uid://bxynptnfrjjx6"]
 
 [ext_resource type="PackedScene" uid="uid://h6iavspc41v3" path="res://assets/scenes/tiles.tscn" id="1_g2w0f"]
 [ext_resource type="TileSet" uid="uid://68dc5ixkmxyv" path="res://assets/sprites/tileset.tres" id="2_crcjo"]
 [ext_resource type="PackedScene" uid="uid://donlvxdth4sg7" path="res://assets/scenes/player.tscn" id="2_xb1c8"]
+[ext_resource type="Texture2D" uid="uid://gcu7wwurwafx" path="res://assets/sprites/decals/decal_eyes1.png" id="4_e7hml"]
+[ext_resource type="PackedScene" uid="uid://c1ow2yswt8sik" path="res://assets/scenes/warp_on_collision.tscn" id="5_hf3tb"]
+[ext_resource type="Texture2D" uid="uid://csa6i8i0im3k2" path="res://assets/sprites/decals/decal_eyes2.png" id="5_jjcdk"]
+[ext_resource type="Texture2D" uid="uid://bg2wuemy6v77o" path="res://assets/sprites/decals/decal_eyes3.png" id="7_avh43"]
+[ext_resource type="Texture2D" uid="uid://c0sc65ex7kl7p" path="res://assets/sprites/decals/decal_eyes4.png" id="8_8win8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v2ym"]
+size = Vector2(729.25, 867.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7hml"]
+size = Vector2(595, 756)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ca2y"]
+size = Vector2(4067.75, 4403.93)
 
 [node name="Node2D" type="Node2D"]
 
@@ -12,6 +26,117 @@
 tile_map_data = PackedByteArray("AAD//wAAAAABAAEAAAAAAAAAAAABAAEAAAABAAAAAAABAAEAAAABAP//AAABAAEAAAABAP7/AAABAAEAAAABAP3/AAABAAEAAAD+/wAAAAABAAEAAAD9/wAAAAABAAEAAAD7/wAAAAABAAEAAAD8/wAAAAABAAEAAAD9//z/AAABAAEAAAD+//z/AAABAAEAAAD///z/AAABAAEAAAAAAPz/AAABAAEAAAABAPz/AAABAAEAAAACAPz/AAABAAEAAAADAPz/AAABAAEAAAAEAPz/AAABAAEAAAAFAPz/AAABAAEAAAAGAPz/AAABAAEAAAAHAPz/AAABAAEAAAAIAPz/AAABAAEAAAD9//v/AAABAAEAAAD9//r/AAABAAEAAAD9//n/AAABAAEAAAD9//j/AAABAAEAAAD9//f/AAABAAEAAAD9//b/AAABAAEAAAD8//b/AAABAAEAAAD7//b/AAABAAEAAAD6//b/AAABAAEAAAD5//b/AAABAAEAAAD4//b/AAABAAEAAAAJAPz/AAABAAEAAAAJAPv/AAABAAEAAAAJAPr/AAABAAEAAAAJAPn/AAABAAEAAAAJAPj/AAABAAEAAAAJAPf/AAABAAEAAAAFAPb/AAABAAEAAAAGAPb/AAABAAEAAAAHAPb/AAABAAEAAAAIAPb/AAABAAEAAAAJAPb/AAABAAEAAAAKAPb/AAABAAEAAAALAPb/AAABAAEAAAAMAPb/AAABAAEAAAANAPb/AAABAAEAAAAOAPb/AAABAAEAAAAPAPb/AAABAAEAAAAQAPb/AAABAAEAAAARAPb/AAABAAEAAAASAPb/AAABAAEAAAARAPf/AAABAAEAAAARAPj/AAABAAEAAAARAPn/AAABAAEAAAARAPr/AAABAAEAAAARAPv/AAABAAEAAAARAPz/AAABAAEAAAARAP3/AAABAAEAAAASAP3/AAABAAEAAAATAP3/AAABAAEAAAAUAP3/AAABAAEAAAAVAP3/AAABAAEAAAAWAP3/AAABAAEAAAAXAP3/AAABAAEAAAAYAP3/AAABAAEAAAAZAP3/AAABAAEAAAAaAP3/AAABAAEAAAAbAP3/AAABAAEAAAAcAP3/AAABAAEAAAAdAP3/AAABAAEAAAAeAP3/AAABAAEAAAAfAP3/AAABAAEAAAAgAP3/AAABAAEAAAAhAP3/AAABAAEAAAATAPb/AAABAAEAAAATAPX/AAABAAEAAAATAPT/AAABAAEAAAATAPP/AAABAAEAAAATAPL/AAABAAEAAAATAPH/AAABAAEAAAATAPD/AAABAAEAAAATAO//AAABAAEAAAATAO7/AAABAAEAAAATAO3/AAABAAEAAAATAOz/AAABAAEAAAASAOz/AAABAAEAAAARAOz/AAABAAEAAAAQAOz/AAABAAEAAAAPAOz/AAABAAEAAAAOAOz/AAABAAEAAAAOAO3/AAABAAEAAAAOAO7/AAABAAEAAAANAO7/AAABAAEAAAAMAO7/AAABAAEAAAAMAO//AAABAAEAAAAMAPD/AAABAAEAAAALAPD/AAABAAEAAAAKAPD/AAABAAEAAAAJAPD/AAABAAEAAAAIAPD/AAABAAEAAAAIAPH/AAABAAEAAAAHAPH/AAABAAEAAAAGAPH/AAABAAEAAAAFAPH/AAABAAEAAAAEAPH/AAABAAEAAAADAPH/AAABAAEAAAADAPL/AAABAAEAAAADAPP/AAABAAEAAAADAPT/AAABAAEAAAADAPX/AAABAAEAAAADAPb/AAABAAEAAAAEAPb/AAABAAEAAAACAPH/AAABAAEAAAABAPH/AAABAAEAAAABAPD/AAABAAEAAAABAO//AAABAAEAAAABAO7/AAABAAEAAAABAO3/AAABAAEAAAAAAO3/AAABAAEAAAD//+3/AAABAAEAAAD+/+3/AAABAAEAAAD9/+3/AAABAAEAAAD8/+3/AAABAAEAAAD7/+3/AAABAAEAAAD6/+3/AAABAAEAAAD6/+7/AAABAAEAAAD6/+//AAABAAEAAAD5/+//AAABAAEAAAD4/+//AAABAAEAAAD3/+//AAABAAEAAAD9/+z/AAABAAEAAAD9/+v/AAABAAEAAAD9/+r/AAABAAEAAAD9/+n/AAABAAEAAAD9/+j/AAABAAEAAAD9/+f/AAABAAEAAAD9/+b/AAABAAEAAAD9/+X/AAABAAEAAAD9/+T/AAABAAEAAAD9/+P/AAABAAEAAAD8/+P/AAABAAEAAAD7/+P/AAABAAEAAAD6/+P/AAABAAEAAAD5/+P/AAABAAEAAAD4/+P/AAABAAEAAAD4/+L/AAABAAEAAAD4/+H/AAABAAEAAAD4/+D/AAABAAEAAAD4/9//AAABAAEAAAD4/97/AAABAAEAAAD5/97/AAABAAEAAAD6/97/AAABAAEAAAD7/97/AAABAAEAAAD8/97/AAABAAEAAAD9/97/AAABAAEAAAD+/97/AAABAAEAAAD//97/AAABAAEAAAAAAN7/AAABAAEAAAABAN7/AAABAAEAAAABAN//AAABAAEAAAABAOD/AAABAAEAAAABAOH/AAABAAEAAAABAOL/AAABAAEAAAABAOP/AAABAAEAAAAAAOP/AAABAAEAAAD//+P/AAABAAEAAAD+/+P/AAABAAEAAAD8/+T/AAABAAEAAAD8/+X/AAABAAEAAAD8/+b/AAABAAEAAAD8/+f/AAABAAEAAAD8/+j/AAABAAEAAAD8/+n/AAABAAEAAAD8/+r/AAABAAEAAAD8/+v/AAABAAEAAAD8/+z/AAABAAEAAAD5/9//AAABAAEAAAD5/+D/AAABAAEAAAD5/+H/AAABAAEAAAD5/+L/AAABAAEAAAD6/9//AAABAAEAAAD6/+D/AAABAAEAAAD6/+H/AAABAAEAAAD6/+L/AAABAAEAAAD7/9//AAABAAEAAAD7/+D/AAABAAEAAAD7/+H/AAABAAEAAAD7/+L/AAABAAEAAAD8/9//AAABAAEAAAD8/+D/AAABAAEAAAD8/+H/AAABAAEAAAD8/+L/AAABAAEAAAD9/9//AAABAAEAAAD9/+D/AAABAAEAAAD9/+H/AAABAAEAAAD9/+L/AAABAAEAAAD+/9//AAABAAEAAAD+/+D/AAABAAEAAAD+/+H/AAABAAEAAAD+/+L/AAABAAEAAAD//9//AAABAAEAAAD//+D/AAABAAEAAAD//+H/AAABAAEAAAD//+L/AAABAAEAAAAAAN//AAABAAEAAAAAAOD/AAABAAEAAAAAAOH/AAABAAEAAAAAAOL/AAABAAEAAAD3//b/AAABAAEAAAD2//b/AAABAAEAAAD1//b/AAABAAEAAAD1//X/AAABAAEAAAD1//T/AAABAAEAAAD1//P/AAABAAEAAAD0//P/AAABAAEAAADz//P/AAABAAEAAADy//P/AAABAAEAAADx//P/AAABAAEAAADw//P/AAABAAEAAADv//P/AAABAAEAAADv//L/AAABAAEAAADu//L/AAABAAEAAAD2/+//AAABAAEAAAD1/+//AAABAAEAAAD0/+//AAABAAEAAADz/+//AAABAAEAAADz//D/AAABAAEAAADz//H/AAABAAEAAADz//L/AAABAAEAAADt//L/AAABAAEAAADs//L/AAABAAEAAADr//L/AAABAAEAAADq//L/AAABAAEAAADp//L/AAABAAEAAADp//H/AAABAAEAAADp//D/AAABAAEAAADp/+//AAABAAEAAADo/+//AAABAAEAAADn/+//AAABAAEAAADm/+//AAABAAEAAADl/+//AAABAAEAAADk/+//AAABAAEAAADj/+//AAABAAEAAAA=")
 tile_set = ExtResource("2_crcjo")
 
+[node name="Wall" parent="Tiles" index="1"]
+tile_map_data = PackedByteArray("AADi/+7/AQACAAEAAADi/+//AQABAAEAAAD6////AQACAAEAAAD6/wAAAQABAAEAAAAiAPz/AQACAAEAAAAiAP3/AQABAAEAAAA=")
+
 [node name="Player" parent="." instance=ExtResource("2_xb1c8")]
+
+[node name="Entry Points" type="Node2D" parent="."]
+
+[node name="Grocery Forest Entry" type="Sprite2D" parent="Entry Points"]
+visible = false
+position = Vector2(-12992, -8239)
+scale = Vector2(0.131348, 0.123047)
+texture = ExtResource("4_e7hml")
+
+[node name="School Entry" type="Sprite2D" parent="Entry Points"]
+visible = false
+position = Vector2(-726, 247)
+scale = Vector2(0.193604, 0.172119)
+texture = ExtResource("4_e7hml")
+
+[node name="Bathhouse Entry" type="Sprite2D" parent="Entry Points"]
+visible = false
+position = Vector2(14563, -1249.5)
+scale = Vector2(0.297851, 0.0717774)
+texture = ExtResource("5_jjcdk")
+
+[node name="Grocery Warp" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grocery Warp"]
+position = Vector2(0, 155)
+
+[node name="WarpOnCollision" parent="Grocery Warp/StaticBody2D" instance=ExtResource("5_hf3tb")]
+position = Vector2(-14730.6, -8478.75)
+warp_to = "res://assets/scenes/worlds/groceryforest.tscn"
+entry_point = "Eyeballs Entry"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grocery Warp/StaticBody2D"]
+position = Vector2(-14730.6, -8478.75)
+shape = SubResource("RectangleShape2D_3v2ym")
+
+[node name="School Warp" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="School Warp"]
+
+[node name="WarpOnCollision" parent="School Warp/StaticBody2D" instance=ExtResource("5_hf3tb")]
+position = Vector2(-2592.5, 239)
+warp_to = "res://assets/scenes/worlds/schoolworld.tscn"
+entry_point = "Eyeballs Entry"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="School Warp/StaticBody2D"]
+position = Vector2(-2592.5, 239)
+shape = SubResource("RectangleShape2D_e7hml")
+
+[node name="Bathhouse Warp" type="Node2D" parent="."]
+position = Vector2(-726, 247)
+scale = Vector2(0.193604, 0.172119)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Bathhouse Warp"]
+
+[node name="WarpOnCollision" parent="Bathhouse Warp/StaticBody2D" instance=ExtResource("5_hf3tb")]
+position = Vector2(91181.2, -8767.18)
+warp_to = "res://assets/scenes/bathhouseworld.tscn"
+entry_point = "Eyeballs Entry"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bathhouse Warp/StaticBody2D"]
+position = Vector2(91759.7, -8836.9)
+shape = SubResource("RectangleShape2D_8ca2y")
+
+[node name="Decals" type="Node2D" parent="."]
+position = Vector2(14563, -1249.5)
+scale = Vector2(0.297851, 0.0717774)
+
+[node name="Sprite2D" type="Sprite2D" parent="Decals"]
+position = Vector2(-25630.2, -24987)
+scale = Vector2(3.68033, 17.085)
+texture = ExtResource("5_jjcdk")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Decals"]
+
+[node name="Sprite2D3" type="Sprite2D" parent="Decals"]
+position = Vector2(-6117.15, -31103.1)
+scale = Vector2(5.90902, 26.9371)
+texture = ExtResource("7_avh43")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Decals"]
+position = Vector2(-23730, -74863.4)
+scale = Vector2(6.86148, 26.3996)
+texture = ExtResource("4_e7hml")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Decals"]
+position = Vector2(-61659.1, -24138.9)
+scale = Vector2(6.65492, 32.6377)
+texture = ExtResource("8_8win8")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Decals"]
+position = Vector2(-52167, -76772.1)
+scale = Vector2(5.79632, 28.0059)
+texture = ExtResource("7_avh43")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Decals"]
+position = Vector2(-90078.5, -52251.8)
+scale = Vector2(5.40287, 21.8869)
+texture = ExtResource("4_e7hml")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Decals"]
+position = Vector2(-47303.6, -141316)
+scale = Vector2(4.99488, 23.8533)
+texture = ExtResource("7_avh43")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Decals"]
+position = Vector2(-70095.4, -239901)
+scale = Vector2(8.19959, 41.7746)
+texture = ExtResource("8_8win8")
 
 [editable path="Tiles"]
