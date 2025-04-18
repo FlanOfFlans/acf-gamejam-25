@@ -8,7 +8,9 @@ func enter(_previous_state_path: String, _data: Dictionary = {}) -> void:
 func exit() -> void:
 	player.animation_player.play("idle_up");
 
-func update(_delta) -> void:	
+func update(_delta) -> void:
+	if not player.can_move: return;
+	
 	if not Input.is_action_pressed("ui_up"):
 		finished.emit(IDLE);
 	

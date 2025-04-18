@@ -1,0 +1,116 @@
+[gd_scene load_steps=9 format=3 uid="uid://dck2s7du62j76"]
+
+[ext_resource type="Script" uid="uid://dvx40px2jxswq" path="res://src/ending.gd" id="1_e2wh0"]
+[ext_resource type="Theme" uid="uid://cyeht3lp0hlpu" path="res://assets/theme.tres" id="1_hbk2m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7gmj"]
+
+[sub_resource type="Animation" id="Animation_hbk2m"]
+resource_name = "show_ending"
+length = 15.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 15, 15.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_e2wh0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bgu11"]
+_data = {
+&"RESET": SubResource("Animation_e2wh0"),
+&"show_ending": SubResource("Animation_hbk2m")
+}
+
+[sub_resource type="Gradient" id="Gradient_p7gmj"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hbk2m"]
+gradient = SubResource("Gradient_p7gmj")
+width = 1900
+height = 1600
+
+[node name="Ending" type="Node2D"]
+script = ExtResource("1_e2wh0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_p7gmj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_bgu11")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer"]
+color = Color(1, 1, 1, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/CanvasModulate"]
+position = Vector2(625, 309)
+texture = SubResource("GradientTexture2D_hbk2m")
+
+[node name="Label" type="Label" parent="CanvasLayer/CanvasModulate"]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 466.0
+offset_top = 17.0
+offset_right = 686.0
+offset_bottom = 638.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+theme = ExtResource("1_hbk2m")
+text = "To the Stars
+
+PROJECT LEAD
+TILESET ARTIST
+WORLD DESIGNER
+Ryca McCullough | Cloudee
+
+PROGRAMMERS
+Rain Yohe
+Soggart
+Hazel Codes
+Luna \"Lstrike\"
+
+CHARACTER DESIGNER
+SCENE ARTIST
+Doki
+
+CARD ARTIST
+Soggart
+
+MUSIC
+TECHNICAL ARTIST
+Rain Yohe
+"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="try_ending"]

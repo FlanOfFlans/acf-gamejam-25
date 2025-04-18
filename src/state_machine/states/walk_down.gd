@@ -9,6 +9,8 @@ func exit() -> void:
 	player.animation_player.play("idle_down");
 
 func update(_delta) -> void:
+	if not player.can_move: return;
+	
 	if not Input.is_action_pressed("ui_down"):
 		finished.emit(IDLE);
 	

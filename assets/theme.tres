@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cyeht3lp0hlpu"]
+
+[ext_resource type="FontFile" uid="uid://daspwdneahcch" path="res://assets/VT323-Regular.ttf" id="1_5x3i2"]
+
+[resource]
+default_font = ExtResource("1_5x3i2")
+default_font_size = 0
+/colors/text = Color(0, 0, 0, 1)
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 22

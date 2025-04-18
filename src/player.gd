@@ -6,6 +6,7 @@ class_name Player extends CharacterBody2D
 @export var speed = 600.0;
 
 var pausemenu = "res://assets/scenes/pause_menu.tscn"
+var can_move: bool = true;
 
 func _ready() -> void:
 	if (GameDataManager.entry_point != ""):
@@ -15,14 +16,16 @@ func _ready() -> void:
 			position = entry_point.position;
 
 func _physics_process(_delta: float) -> void:
-	move_and_slide();
-	GameDataManager.playercoords = position
+	if can_move:
+		move_and_slide();
+		GameDataManager.playercoords = position;
 	
 	if Input.is_action_just_pressed("pause"):
-		if GameDataManager.paused == true:
-			closethemenu()
-		else:
-			openthemenu()
+		if not GameDataManager.paused and can_move:
+			openthemenu();
+			
+		elif GameDataManager.paused: 
+			closethemenu();
 	
 func interact():
 	var areas = interaction_area.get_overlapping_areas();
@@ -37,14 +40,14 @@ func interact():
 		area.call("interact", self);
 
 func closethemenu():
-	print("fechatesesamo")
+	can_move = true;
 	for node in menuslot.get_children():
 		menuslot.call_deferred("remove_child", node)
 		node.queue_free()
 		GameDataManager.paused = false
 
 func openthemenu():
-	print("abretesesamo")
+	can_move = false;
 	var scenemenu = load(pausemenu)
 	var instancemenu = scenemenu.instantiate()
 	menuslot.add_child(instancemenu)
