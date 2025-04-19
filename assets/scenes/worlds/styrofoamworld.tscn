@@ -166,5 +166,6 @@ shape = SubResource("RectangleShape2D_cj261")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_rueo1")
+autoplay = true
 
 [editable path="Tiles"]

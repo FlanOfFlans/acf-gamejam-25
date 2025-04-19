@@ -123,5 +123,6 @@ texture = ExtResource("9_afe8x")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_33nj4")
+autoplay = true
 
 [editable path="Tiles"]

@@ -69,5 +69,6 @@ card_name = "School Card"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_wbrjq")
+autoplay = true
 
 [editable path="Tiles"]
