@@ -296,6 +296,7 @@ script = ExtResource("1_o5c66")
 speed = 1400.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -578.6)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o5c66")
 hframes = 4
@@ -308,7 +309,7 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 446.5)
+position = Vector2(0, -132.1)
 scale = Vector2(24, 33)
 shape = SubResource("RectangleShape2D_6hh55")
 
@@ -332,6 +333,7 @@ script = ExtResource("6_qer5g")
 script = ExtResource("7_uvo6m")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -578.6)
 zoom = Vector2(0.1, 0.1)
 
 [node name="InteractionArea" type="Area2D" parent="."]
