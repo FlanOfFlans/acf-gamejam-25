@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://b37a3yx57smyu"]
+[gd_scene load_steps=16 format=4 uid="uid://b37a3yx57smyu"]
 
 [ext_resource type="PackedScene" uid="uid://h6iavspc41v3" path="res://assets/scenes/tiles.tscn" id="1_kpa1d"]
 [ext_resource type="Texture2D" uid="uid://gcu7wwurwafx" path="res://assets/sprites/decals/decal_eyes1.png" id="3_rreac"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c8cvxfgt8wm4v" path="res://assets/sprites/decals/decal_grocerygreenery3.png" id="10_16y71"]
 [ext_resource type="PackedScene" uid="uid://donlvxdth4sg7" path="res://assets/scenes/player.tscn" id="11_rgg44"]
 [ext_resource type="Texture2D" uid="uid://bdjh7ec0py4l7" path="res://assets/sprites/backgrounds/bg_groceryforest.jpg" id="12_16y71"]
+[ext_resource type="AudioStream" uid="uid://qa1s6vt5fxxt" path="res://assets/music/rootstock.wav" id="13_16y71"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ye27g"]
 animations = [{
@@ -171,5 +172,9 @@ z_index = -1
 position = Vector2(7169.15, -3705.15)
 scale = Vector2(9.30229, 7.18743)
 texture = ExtResource("12_16y71")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_16y71")
+autoplay = true
 
 [editable path="Tiles"]

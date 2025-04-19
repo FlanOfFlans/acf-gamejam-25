@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://bxynptnfrjjx6"]
+[gd_scene load_steps=10 format=4 uid="uid://bxynptnfrjjx6"]
 
 [ext_resource type="PackedScene" uid="uid://h6iavspc41v3" path="res://assets/scenes/tiles.tscn" id="1_g2w0f"]
 [ext_resource type="PackedScene" uid="uid://donlvxdth4sg7" path="res://assets/scenes/player.tscn" id="2_xb1c8"]
@@ -8,8 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://bg2wuemy6v77o" path="res://assets/sprites/decals/decal_eyes3.png" id="7_avh43"]
 [ext_resource type="Texture2D" uid="uid://c0sc65ex7kl7p" path="res://assets/sprites/decals/decal_eyes4.png" id="8_8win8"]
 [ext_resource type="PackedScene" uid="uid://du5u3xgv7jt0o" path="res://assets/scenes/tarot_card.tscn" id="8_jjcdk"]
+[ext_resource type="AudioStream" uid="uid://da3n6noftbpqp" path="res://assets/music/photon sphere.wav" id="9_avh43"]
 
-[node name="Node2D2" type="Node2D"]
+[node name="Node2D3" type="Node2D"]
 
 [node name="Tiles" parent="." instance=ExtResource("1_g2w0f")]
 
@@ -116,5 +117,9 @@ texture = ExtResource("8_8win8")
 [node name="TarotCard" parent="Tarot Card" instance=ExtResource("8_jjcdk")]
 position = Vector2(-1577, -15549)
 card_name = "Eye Card"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_avh43")
+autoplay = true
 
 [editable path="Tiles"]

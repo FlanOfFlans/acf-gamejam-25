@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://bwech6k637eq8"]
+[gd_scene load_steps=8 format=4 uid="uid://bwech6k637eq8"]
 
 [ext_resource type="PackedScene" uid="uid://h6iavspc41v3" path="res://assets/scenes/tiles.tscn" id="1_0xi4d"]
 [ext_resource type="PackedScene" uid="uid://donlvxdth4sg7" path="res://assets/scenes/player.tscn" id="2_i0ut1"]
@@ -6,8 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://du5u3xgv7jt0o" path="res://assets/scenes/tarot_card.tscn" id="5_fjss7"]
 [ext_resource type="PackedScene" uid="uid://c1ow2yswt8sik" path="res://assets/scenes/warp_on_collision.tscn" id="5_u1sju"]
 [ext_resource type="Texture2D" uid="uid://d4c5x8b4yu6f5" path="res://assets/sprites/backgrounds/bg_blackhole.jpg" id="6_u1sju"]
+[ext_resource type="AudioStream" uid="uid://da3n6noftbpqp" path="res://assets/music/photon sphere.wav" id="7_u1sju"]
 
-[node name="Node2D2" type="Node2D"]
+[node name="Node2D3" type="Node2D"]
 
 [node name="Tiles" parent="." instance=ExtResource("1_0xi4d")]
 
@@ -48,5 +49,9 @@ z_index = -1
 position = Vector2(-684, -2711)
 scale = Vector2(8.12833, 9.2555)
 texture = ExtResource("6_u1sju")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_u1sju")
+autoplay = true
 
 [editable path="Tiles"]
