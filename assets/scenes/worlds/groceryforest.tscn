@@ -75,14 +75,14 @@ scale = Vector2(0.417969, 0.437012)
 position = Vector2(-2976.3, 221.961)
 scale = Vector2(40, 40)
 warp_to = "res://assets/scenes/worlds/observatoryworld.tscn"
-entry_point = " Grocery Forest Entry"
+entry_point = "Grocery Forest Entry"
 
 [node name="Eyeballs Warp" type="Node2D" parent="."]
 position = Vector2(-6508, 7510)
 scale = Vector2(0.417969, 0.437012)
 
 [node name="WarpOnCollision" parent="Eyeballs Warp" instance=ExtResource("4_j10po")]
-position = Vector2(59229.3, -16846.2)
+position = Vector2(59229.3, -16603.7)
 scale = Vector2(40, 40)
 warp_to = "res://assets/scenes/worlds/eyeballsworld.tscn"
 entry_point = " Grocery Forest Entry"
