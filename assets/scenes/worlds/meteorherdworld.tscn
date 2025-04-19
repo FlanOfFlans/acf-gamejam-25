@@ -69,6 +69,7 @@ texture = ExtResource("5_yv7yi")
 
 [node name="TarotCard" parent="Tarot Card" instance=ExtResource("7_twd71")]
 position = Vector2(-1745, -12302)
+card_name = "Meteor Card"
 
 [node name="Background" type="Node2D" parent="."]
 
