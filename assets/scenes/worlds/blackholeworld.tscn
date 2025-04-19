@@ -39,6 +39,7 @@ entry_point = "Black Hole Entry"
 
 [node name="TarotCard" parent="Tarot Card" instance=ExtResource("5_fjss7")]
 position = Vector2(-1780, -7224)
+card_name = "Black Hole Card"
 
 [node name="Background" type="Node2D" parent="."]
 

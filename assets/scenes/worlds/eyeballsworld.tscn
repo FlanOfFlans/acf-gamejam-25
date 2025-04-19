@@ -115,5 +115,6 @@ texture = ExtResource("8_8win8")
 
 [node name="TarotCard" parent="Tarot Card" instance=ExtResource("8_jjcdk")]
 position = Vector2(-1577, -15549)
+card_name = "Eye Card"
 
 [editable path="Tiles"]

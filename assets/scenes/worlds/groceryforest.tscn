@@ -101,6 +101,7 @@ position = Vector2(122, -157)
 
 [node name="TarotCard" parent="Tarot Card" instance=ExtResource("4_x5cbd")]
 position = Vector2(4327, -4188)
+card_name = "Grocery Card"
 
 [node name="Decals" type="Node2D" parent="."]
 position = Vector2(681, 384)

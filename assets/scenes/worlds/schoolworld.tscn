@@ -64,5 +64,6 @@ entry_point = "School Entry"
 
 [node name="TarotCard" parent="Tarot Card" instance=ExtResource("5_jwf4u")]
 position = Vector2(-9004, 5758)
+card_name = "School Card"
 
 [editable path="Tiles"]

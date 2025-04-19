@@ -83,6 +83,7 @@ scale = Vector2(8.27637, 7.14111)
 
 [node name="TarotCard" parent="Tarot Card" instance=ExtResource("5_6nuba")]
 position = Vector2(-2987.78, -1002.51)
+card_name = "Styrofoam Card"
 
 [node name="Buildings" type="Node2D" parent="."]
 position = Vector2(12229, -14899)
