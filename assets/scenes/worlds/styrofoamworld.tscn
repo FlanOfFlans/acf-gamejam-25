@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://c6xk8j6tf0wqq"]
+[gd_scene load_steps=15 format=4 uid="uid://c6xk8j6tf0wqq"]
 
 [ext_resource type="PackedScene" uid="uid://h6iavspc41v3" path="res://assets/scenes/tiles.tscn" id="1_p2xkw"]
 [ext_resource type="PackedScene" uid="uid://donlvxdth4sg7" path="res://assets/scenes/player.tscn" id="2_seucn"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://xb700wh3ovkr" path="res://assets/sprites/decals/decal_styrofoambuilding2.png" id="7_rueo1"]
 [ext_resource type="Texture2D" uid="uid://b76eqgcqb7xya" path="res://assets/sprites/decals/decal_styrofoambuilding3.png" id="8_a27un"]
 [ext_resource type="Texture2D" uid="uid://vtguysvy28a" path="res://assets/sprites/decals/decal_styrofoambuilding4.png" id="9_r5m00"]
+[ext_resource type="AudioStream" uid="uid://da3n6noftbpqp" path="res://assets/music/photon sphere.wav" id="10_rueo1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38fgr"]
 size = Vector2(780.173, 1014.69)
@@ -162,5 +163,8 @@ texture = ExtResource("7_rueo1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/Sprite2D7/StaticBody2D"]
 position = Vector2(21.0237, 11.2026)
 shape = SubResource("RectangleShape2D_cj261")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_rueo1")
 
 [editable path="Tiles"]

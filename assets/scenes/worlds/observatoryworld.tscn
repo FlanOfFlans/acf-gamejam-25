@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://dnjltjgxunpd3"]
+[gd_scene load_steps=11 format=4 uid="uid://dnjltjgxunpd3"]
 
 [ext_resource type="PackedScene" uid="uid://h6iavspc41v3" path="res://assets/scenes/tiles.tscn" id="1_hncwy"]
 [ext_resource type="Texture2D" uid="uid://bc81gbolkecum" path="res://assets/sprites/decals/decal_observatoryplanetdoodle.png" id="1_uerp5"]
@@ -9,8 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://donlvxdth4sg7" path="res://assets/scenes/player.tscn" id="8_epdxb"]
 [ext_resource type="PackedScene" uid="uid://du5u3xgv7jt0o" path="res://assets/scenes/tarot_card.tscn" id="9_33nj4"]
 [ext_resource type="Texture2D" uid="uid://dyyxsalehotb2" path="res://assets/sprites/backgrounds/bg_observatory.jpg" id="9_afe8x"]
+[ext_resource type="AudioStream" uid="uid://cv17dg86arq75" path="res://assets/music/stargazing.wav" id="10_33nj4"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="Decals" type="Node2D" parent="."]
 
@@ -119,5 +120,8 @@ z_index = -1
 position = Vector2(1197, -380)
 scale = Vector2(6.747, 6.5135)
 texture = ExtResource("9_afe8x")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_33nj4")
 
 [editable path="Tiles"]

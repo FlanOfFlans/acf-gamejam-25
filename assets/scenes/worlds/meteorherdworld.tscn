@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://crao13jio4y7h"]
+[gd_scene load_steps=9 format=4 uid="uid://crao13jio4y7h"]
 
 [ext_resource type="PackedScene" uid="uid://donlvxdth4sg7" path="res://assets/scenes/player.tscn" id="1_bj65c"]
 [ext_resource type="PackedScene" uid="uid://h6iavspc41v3" path="res://assets/scenes/tiles.tscn" id="1_jc3jv"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://da6kvdasupism" path="res://assets/sprites/decals/decal_eggasteroid.png" id="5_yv7yi"]
 [ext_resource type="Texture2D" uid="uid://dw8hni68rltfo" path="res://assets/sprites/backgrounds/bg_meteorherd.jpg" id="6_yv7yi"]
 [ext_resource type="PackedScene" uid="uid://du5u3xgv7jt0o" path="res://assets/scenes/tarot_card.tscn" id="7_twd71"]
+[ext_resource type="AudioStream" uid="uid://cv17dg86arq75" path="res://assets/music/stargazing.wav" id="8_twd71"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -78,5 +79,8 @@ z_index = -1
 position = Vector2(-7470, -3298)
 scale = Vector2(7.7102, 7.47521)
 texture = ExtResource("6_yv7yi")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_twd71")
 
 [editable path="Tiles"]
