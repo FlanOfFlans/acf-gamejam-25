@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdhtyl2gd01y0"]
+[gd_scene load_steps=3 format=3 uid="uid://cdhtyl2gd01y0"]
 
 [ext_resource type="Script" uid="uid://q0xklcjv8hu3" path="res://pause_menu.gd" id="1_8ekew"]
+[ext_resource type="Theme" uid="uid://cyeht3lp0hlpu" path="res://assets/theme.tres" id="2_uo1om"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -40,6 +41,7 @@ offset_right = 64.5
 offset_bottom = -57.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_uo1om")
 text = "Return"
 
 [node name="Button2" type="Button" parent="."]
@@ -55,6 +57,7 @@ offset_right = 64.5
 offset_bottom = 92.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_uo1om")
 text = "Exit"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
