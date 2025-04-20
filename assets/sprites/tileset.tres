@@ -1,8 +1,9 @@
-[gd_resource type="TileSet" load_steps=8 format=3 uid="uid://68dc5ixkmxyv"]
+[gd_resource type="TileSet" load_steps=10 format=3 uid="uid://68dc5ixkmxyv"]
 
 [ext_resource type="Texture2D" uid="uid://cvlrkfe1285og" path="res://assets/sprites/sprite_sheet1.png" id="1_g1e23"]
 [ext_resource type="Texture2D" uid="uid://cmvalcffj8cqp" path="res://assets/sprites/sprite_sheet(3).png" id="2_hkdvi"]
 [ext_resource type="Texture2D" uid="uid://igiscs5c7k8n" path="res://assets/sprites/tile_star.png" id="3_p6do0"]
+[ext_resource type="Texture2D" uid="uid://dcq5j07lpcmi1" path="res://assets/sprites/tile_bathhousetiles.png" id="4_1yili"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_g1e23"]
 vertices = PackedVector2Array(250, 250, -250, 250, -250, -250, 250, -250)
@@ -115,6 +116,11 @@ texture_region_size = Vector2i(500, 500)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-250, -250, 250, -250, 250, 250, -250, 250)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o4vhl"]
+texture = ExtResource("4_1yili")
+texture_region_size = Vector2i(500, 500)
+0:0/0 = 0
+
 [resource]
 tile_size = Vector2i(500, 500)
 physics_layer_0/collision_layer = 1
@@ -122,3 +128,4 @@ navigation_layer_0/layers = 1
 sources/0 = SubResource("TileSetAtlasSource_hkdvi")
 sources/1 = SubResource("TileSetAtlasSource_p6do0")
 sources/2 = SubResource("TileSetAtlasSource_1yili")
+sources/3 = SubResource("TileSetAtlasSource_o4vhl")

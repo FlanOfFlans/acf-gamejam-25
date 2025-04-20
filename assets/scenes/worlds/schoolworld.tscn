@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://bs0kpquycwwlb"]
+[gd_scene load_steps=11 format=4 uid="uid://bs0kpquycwwlb"]
 
 [ext_resource type="PackedScene" uid="uid://h6iavspc41v3" path="res://assets/scenes/tiles.tscn" id="1_8et7l"]
 [ext_resource type="PackedScene" uid="uid://donlvxdth4sg7" path="res://assets/scenes/player.tscn" id="2_5fy5o"]
@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://du5u3xgv7jt0o" path="res://assets/scenes/tarot_card.tscn" id="5_jwf4u"]
 [ext_resource type="PackedScene" uid="uid://c1ow2yswt8sik" path="res://assets/scenes/warp_on_collision.tscn" id="5_wbrjq"]
 [ext_resource type="AudioStream" uid="uid://qa1s6vt5fxxt" path="res://assets/music/rootstock.wav" id="6_wbrjq"]
+[ext_resource type="Texture2D" uid="uid://u17ykreiy2uy" path="res://assets/sprites/decals/decal_schoolperson1.png" id="7_lxicf"]
+[ext_resource type="Texture2D" uid="uid://deeuqjm087ucn" path="res://assets/sprites/decals/decal_schoolperson2.png" id="8_2qkqc"]
+[ext_resource type="Texture2D" uid="uid://ckqddfrqo74e2" path="res://assets/sprites/decals/decal_schoolperson3.png" id="9_psdyq"]
+[ext_resource type="Texture2D" uid="uid://nnr1j3x1t1rm" path="res://assets/sprites/decals/decal_schoolperson4.png" id="10_iabd7"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -70,5 +74,51 @@ card_name = "School Card"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_wbrjq")
 autoplay = true
+
+[node name="Decals" type="Node2D" parent="."]
+position = Vector2(-9004, 5758)
+
+[node name="Sprite2D" type="Sprite2D" parent="Decals"]
+position = Vector2(7468, -4973)
+texture = ExtResource("7_lxicf")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Decals"]
+position = Vector2(10522, -3734)
+texture = ExtResource("8_2qkqc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Decals"]
+position = Vector2(6884, 2339)
+scale = Vector2(1.192, 1.419)
+texture = ExtResource("9_psdyq")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Decals"]
+position = Vector2(9266, 558)
+texture = ExtResource("10_iabd7")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Decals"]
+position = Vector2(13035, -576)
+texture = ExtResource("8_2qkqc")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Decals"]
+position = Vector2(17179, -2529)
+scale = Vector2(1.192, 1.419)
+texture = ExtResource("9_psdyq")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Decals"]
+position = Vector2(16123, -5200)
+texture = ExtResource("7_lxicf")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Decals"]
+position = Vector2(22336, -1292)
+texture = ExtResource("10_iabd7")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Decals"]
+position = Vector2(25224, -6089)
+scale = Vector2(1.192, 1.419)
+texture = ExtResource("9_psdyq")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Decals"]
+position = Vector2(24918, 872)
+texture = ExtResource("7_lxicf")
 
 [editable path="Tiles"]
