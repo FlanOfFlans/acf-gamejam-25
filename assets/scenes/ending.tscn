@@ -21,6 +21,7 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+<<<<<<< HEAD
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
@@ -33,6 +34,8 @@ tracks/1/keys = {
 "update": 1,
 "values": [false]
 }
+=======
+>>>>>>> 977380cc9a0be42fc0b7f7e1dc23e1b765d5d439
 
 [sub_resource type="Animation" id="Animation_hbk2m"]
 resource_name = "show_ending"
@@ -136,7 +139,7 @@ Ryca McCullough | Cloudee
 PROGRAMMERS
 Rain Yohe
 Soggart
-Hazel Codes
+Hazel
 Luna \"Lstrike\"
 
 CHARACTER DESIGNER

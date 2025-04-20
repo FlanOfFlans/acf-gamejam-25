@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dktp2na2nj4f8"]
+[gd_scene load_steps=16 format=3 uid="uid://dktp2na2nj4f8"]
 
 [ext_resource type="Texture2D" uid="uid://v45pnm35bj4y" path="res://assets/sprites/bedroom.png" id="1_axckk"]
 [ext_resource type="Texture2D" uid="uid://dbioupnqudw8l" path="res://assets/sprites/decals/decal_door.png" id="2_c0c87"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://gcu7wwurwafx" path="res://assets/sprites/decals/decal_eyes1.png" id="5_f1gne"]
 [ext_resource type="PackedScene" uid="uid://donlvxdth4sg7" path="res://assets/scenes/player.tscn" id="6_u6r3v"]
 [ext_resource type="PackedScene" uid="uid://du5u3xgv7jt0o" path="res://assets/scenes/tarot_card.tscn" id="8_b3k7o"]
+[ext_resource type="AudioStream" uid="uid://bnbja2lf3uwgp" path="res://assets/music/001013_interior-city-apartment-53658.mp3" id="9_v3m6q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sxc3j"]
 size = Vector2(560.05, 3981.3)
@@ -107,3 +108,7 @@ scale = Vector2(1.2108, 1.2108)
 [node name="TarotCard" parent="Tarot Card" instance=ExtResource("8_b3k7o")]
 position = Vector2(-355, 10)
 card_name = "Bedroom Card"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_v3m6q")
+autoplay = true
