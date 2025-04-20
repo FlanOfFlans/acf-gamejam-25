@@ -5,7 +5,7 @@ extends Node2D
 
 func try_ending(body: Node2D) -> void:
 	if (body is Player):
-		if (GameDataManager.tarot_cards.size() >= 8):
+		if (GameDataManager.tarot_cards.size() >= 9):
 			(body as Player).can_move = false;
 			animation_player.play("show_ending");
 		else:
