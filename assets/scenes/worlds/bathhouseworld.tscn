@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://d3rl0xdecv8ne"]
+[gd_scene load_steps=9 format=4 uid="uid://d3rl0xdecv8ne"]
 
 [ext_resource type="PackedScene" uid="uid://h6iavspc41v3" path="res://assets/scenes/tiles.tscn" id="1_3msj0"]
 [ext_resource type="Texture2D" uid="uid://gcu7wwurwafx" path="res://assets/sprites/decals/decal_eyes1.png" id="1_4kl1x"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://du5u3xgv7jt0o" path="res://assets/scenes/tarot_card.tscn" id="5_acisk"]
 [ext_resource type="PackedScene" uid="uid://donlvxdth4sg7" path="res://assets/scenes/player.tscn" id="5_u6aaf"]
 [ext_resource type="Texture2D" uid="uid://dl45w8nlg56c6" path="res://assets/sprites/backgrounds/bg_bathhouse.jpg" id="6_j8v32"]
+[ext_resource type="Texture2D" uid="uid://bfn1la1tjyoqu" path="res://dez_de_espadas.png" id="6_pl1yw"]
 [ext_resource type="AudioStream" uid="uid://b7tnhql4rphjs" path="res://assets/music/taranis.wav" id="7_j8v32"]
 
 [node name="Node2D" type="Node2D"]
@@ -68,7 +69,12 @@ position = Vector2(-19, -130)
 
 [node name="TarotCard" parent="Tarot Card" instance=ExtResource("5_acisk")]
 position = Vector2(-11080, 5497)
+scale = Vector2(2, 2)
 card_name = "Bath Card"
+
+[node name="Sprite2D" parent="Tarot Card/TarotCard" index="0"]
+scale = Vector2(0.130377, 0.130377)
+texture = ExtResource("6_pl1yw")
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -83,3 +89,4 @@ stream = ExtResource("7_j8v32")
 autoplay = true
 
 [editable path="Tiles"]
+[editable path="Tarot Card/TarotCard"]
