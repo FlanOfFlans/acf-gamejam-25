@@ -69,7 +69,7 @@ position = Vector2(-19, -130)
 
 [node name="TarotCard" parent="Tarot Card" instance=ExtResource("5_acisk")]
 position = Vector2(-11080, 5497)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 card_name = "Bath Card"
 
 [node name="Sprite2D" parent="Tarot Card/TarotCard" index="0"]

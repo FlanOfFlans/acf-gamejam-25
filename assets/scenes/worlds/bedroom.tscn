@@ -108,7 +108,7 @@ scale = Vector2(1.2108, 1.2108)
 
 [node name="TarotCard" parent="Tarot Card" instance=ExtResource("8_b3k7o")]
 position = Vector2(-355, 367)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 card_name = "Bedroom Card"
 
 [node name="Sprite2D" parent="Tarot Card/TarotCard" index="0"]

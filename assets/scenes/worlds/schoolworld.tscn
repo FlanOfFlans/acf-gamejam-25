@@ -70,7 +70,7 @@ entry_point = "School Entry"
 
 [node name="TarotCard" parent="Tarot Card" instance=ExtResource("5_jwf4u")]
 position = Vector2(-9004, 5758)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 card_name = "School Card"
 
 [node name="Sprite2D" parent="Tarot Card/TarotCard" index="0"]

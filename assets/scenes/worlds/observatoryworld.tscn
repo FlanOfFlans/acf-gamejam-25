@@ -106,13 +106,13 @@ warp_to = "res://assets/scenes/worlds/bedroom.tscn"
 entry_point = "Observatory Entry"
 
 [node name="Player" parent="." instance=ExtResource("8_epdxb")]
-position = Vector2(-3483, -5375)
+position = Vector2(-3483, -10)
 
 [node name="Tarot Card" type="Node2D" parent="."]
 
 [node name="TarotCard" parent="Tarot Card" instance=ExtResource("9_33nj4")]
-position = Vector2(-3477, -6185)
-scale = Vector2(2, 2)
+position = Vector2(-3477, -5964)
+scale = Vector2(3, 3)
 card_name = "Observatory Card"
 
 [node name="Sprite2D" parent="Tarot Card/TarotCard" index="0"]

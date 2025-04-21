@@ -41,7 +41,7 @@ entry_point = "Black Hole Entry"
 
 [node name="TarotCard" parent="Tarot Card" instance=ExtResource("5_fjss7")]
 position = Vector2(-1780, -7224)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 card_name = "Black Hole Card"
 
 [node name="Sprite2D" parent="Tarot Card/TarotCard" index="0"]

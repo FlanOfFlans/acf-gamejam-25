@@ -71,7 +71,7 @@ texture = ExtResource("5_yv7yi")
 
 [node name="TarotCard" parent="Tarot Card" instance=ExtResource("7_twd71")]
 position = Vector2(-1745, -12302)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 card_name = "Meteor Card"
 
 [node name="Sprite2D" parent="Tarot Card/TarotCard" index="0"]

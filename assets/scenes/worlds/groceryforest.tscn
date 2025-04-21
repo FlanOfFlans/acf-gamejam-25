@@ -73,7 +73,7 @@ position = Vector2(-6508, 7510)
 scale = Vector2(0.417969, 0.437012)
 
 [node name="WarpOnCollision" parent="Observatory Warp" instance=ExtResource("4_j10po")]
-position = Vector2(-2976.3, 221.961)
+position = Vector2(-2976.3, 221.962)
 scale = Vector2(40, 40)
 warp_to = "res://assets/scenes/worlds/observatoryworld.tscn"
 entry_point = "Grocery Forest Entry"
@@ -103,7 +103,7 @@ position = Vector2(122, -157)
 
 [node name="TarotCard" parent="Tarot Card" instance=ExtResource("4_x5cbd")]
 position = Vector2(4327, -4188)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 card_name = "Grocery Card"
 
 [node name="Sprite2D" parent="Tarot Card/TarotCard" index="0"]
